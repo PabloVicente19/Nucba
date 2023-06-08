@@ -5,26 +5,27 @@ Un closure es un encademaniento de 2 funciones mediante una variable. Es decir, 
 */
 // Ejemplo:
 const generateFunction = () => {
-  // variable de generateFunction
-  const name = "Pablo";
-  const showName = () => {
-    // showName accede a name (que esta fuera de su scope)
-    return console.log(name);
-  }
-  return showName; // generate retorna showName 
-}
+	// variable de generateFunction
+	const name = "Pablo";
+	const showName = () => {
+		// showName accede a name (que esta fuera de su scope)
+		return console.log(name);
+	};
+	return showName; // generate retorna showName
+};
 const newFunction = generateFunction();
 // newFunction()
 
 // Otro ejemplo:
 const productOfNumber = (n) => {
-    let x = n;
-    return function (otroNum){ // esta funcion hereda el scope de profuctofnumber
-      return x * otroNum
-    }
-}
-const unaVariable = productOfNumber(5) // esta variable guarda el valor de x de product....
-console.log(unaVariable(5)) // cuando consoleamos unaVariable ahora el 5 se multiplica por el otro valor guardado
+	let x = n;
+	return function (otroNum) {
+		// esta funcion hereda el scope de profuctofnumber
+		return x * otroNum;
+	};
+};
+const unaVariable = productOfNumber(5); // esta variable guarda el valor de x de product....
+console.log(unaVariable(5)); // cuando consoleamos unaVariable ahora el 5 se multiplica por el otro valor guardado
 
 // Objetos:
 /*
@@ -39,16 +40,16 @@ Se puede crear un objeto mediante lo que es un objeto literal o clases.
 
 // Objeto LITERAL: es un objeto que se arma desde 0
 let auto = {
-  marca: "Fiat",
-  modelo: "Uno",
-  anio: 2002,
-  combustible: "Nafta",
-  seguro: true,
-  color:{
-    blanco: "Blanco",
-    negro: "Negro",
-  }
-}
+	marca: "Fiat",
+	modelo: "Uno",
+	anio: 2002,
+	combustible: "Nafta",
+	seguro: true,
+	color: {
+		blanco: "Blanco",
+		negro: "Negro",
+	},
+};
 
 // ¿Como accedo a una propiedad de un objeto?
 // Se accede mediante notacion de punto: nombreDeObjeto.propiedad
@@ -56,19 +57,19 @@ console.log(auto.marca);
 
 //Ejemplo de array de objetos:
 let peliculas = [
-  {
-    titulo: "Volver al futuro",
-    anio: 1980
-  },
-  {
-    titulo: "Volver al futuro",
-    anio: 1980
-  },
-  {
-    titulo: "Volver al futuro",
-    anio: 1980
-  },
-]
+	{
+		titulo: "Volver al futuro",
+		anio: 1980,
+	},
+	{
+		titulo: "Volver al futuro",
+		anio: 1980,
+	},
+	{
+		titulo: "Volver al futuro",
+		anio: 1980,
+	},
+];
 
 // CLASE:
 /*
@@ -78,31 +79,28 @@ let peliculas = [
 */
 // Ejemplo de CLASE:
 class Auto {
-  constructor(marca, modelo, anio, combustible, seguro, color){
-    this.marca = marca;
-    this.modelo = modelo;
-    this.anio = anio;
-    this.combustible = combustible;
-    this.seguro = seguro;
-    this.color = color;
-  }
-  cambioSeguro = () =>{this.seguro = false }
+	constructor(marca, modelo, anio, combustible, seguro, color) {
+		this.marca = marca;
+		this.modelo = modelo;
+		this.anio = anio;
+		this.combustible = combustible;
+		this.seguro = seguro;
+		this.color = color;
+	}
+	cambioSeguro = () => {
+		this.seguro = false;
+	};
 }
 // Creacion de un objeto mediante el uso de clase:
-const auto1 = new Auto("Fiat","Uno",2010,"Nafta", true, "Negro");
-const auto2 = new Auto("Ford","Falcon",1973,"Gnc", false, "Verde");
+const auto1 = new Auto("Fiat", "Uno", 2010, "Nafta", true, "Negro");
+const auto2 = new Auto("Ford", "Falcon", 1973, "Gnc", false, "Verde");
 
 // console.log(auto1);
 console.log(auto1.seguro);
-auto1.cambioSeguro()
+auto1.cambioSeguro();
 console.log(auto1.seguro);
-
-
-
 
 // METODOS DE UN OBJETO:
 /*
   Los Metodos son funciones que modifican las propiedades de un objeto.
 */
-
-// terminar clase: lo deje en el minuto 50
