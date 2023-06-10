@@ -150,7 +150,7 @@ console.log(corteDeArr);
 length
 every
 filter
-find
+find  -> busca un elemento pasado por parametro
 some
 forEach
 join
