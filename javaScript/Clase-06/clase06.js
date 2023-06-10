@@ -120,7 +120,7 @@ let numerosMasUno = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let numerosSuma = numerosMasUno.map((valor) => valor + 1); // Ejecuta un callback por cada elemento
 console.log(numerosSuma);
 
-// como recibe un callbal podemos crear la funcion fuera del metodo.
+// como recibe un callbalck podemos crear la funcion fuera del metodo.
 // Esti queda mas legible
 
 // funcion que va a sumar los elementos del array
@@ -130,3 +130,30 @@ const sumador = (a) => {
 
 let numerosSumados = numerosMasUno.map(sumador); // le pasamos la funcion como parametro
 console.log(numerosSumados);
+
+// .concat()
+// Este metodo une dos arrays en un nuevo array
+let mamiferos = ["Leon", "Tigre"]
+let insectos = ["Mosca","Mantiz"]
+let animales = mamiferos.concat(insectos);
+console.log(animales);
+
+// .slice()
+// Este metodo corta un array desde un inicio hasta un fin pasado por parametro,
+// Los numeros pasados corresponden a los indices. El 0 CUENTA!
+
+let corteDeArr = animales.slice(0,2); // como devuelve un nuevo array es mejor almacenarlo en otra variable
+console.log(corteDeArr);
+
+// Mas utilizados:
+/*
+length
+every
+filter
+find
+some
+forEach
+join
+map
+split
+*/

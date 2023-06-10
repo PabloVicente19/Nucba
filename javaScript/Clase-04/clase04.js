@@ -41,7 +41,10 @@ function recursion (num){
   if (num <= 1){
     return 1
   }
-  console.log(num);
+
     return (recursion( num - 1));
 }
 console.log(recursion(12))
+
+// Callbacks
+/* Los callback son funciones que se pasan como argumento a otra funcion  */
