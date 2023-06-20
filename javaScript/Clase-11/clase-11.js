@@ -25,10 +25,13 @@ function blurFunction () {
 // CAMBIAR CLASES CON JS
 $input.classList.add('add')
 $input.classList.remove('add')
+
 // De manera automatica lo hace el .toggle()
+// lo que haces es agregarla o quitarla.
 $input.classList.toggle('add')
 
 // Cambiar atributos con js
 // Se maneja por clave, valor. es decir, primero ponemos el nombre del atributo y luego el valor del atributo
 $input.setAttribute('name',' helloButton');
 $input.setAttribute('disable', "")
+
