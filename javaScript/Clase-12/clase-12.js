@@ -1,10 +1,10 @@
-//  Crear elementos 
+//  Crear elementos
 // Para crear Elementos Se utiliza el metodo: .createElement()
 
-const header = document.createElement('header');
-header.textContent = 'Soy un header creado en JS'
+const header = document.createElement("header");
+header.textContent = "Soy un header creado en JS";
 // appenChild se utiliza para incrustar el elemento en una etiqueta contenedora
-document.body.appendChild(header)
+document.body.appendChild(header);
 
 // JSON
 /*
