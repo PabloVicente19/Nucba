@@ -50,9 +50,9 @@ const getValue = (time, value) => {
 	});
 };
 
-getValue(500, "c")
-	.then((res) => console.log(res))
-	.catch((error) => console.log(error));
+// getValue(500, "c")
+// 	.then((res) => console.log(res))
+// 	.catch((error) => console.log(error));
 
 // Manejo de errores
 /*
@@ -60,10 +60,40 @@ getValue(500, "c")
 
 	Ejemplo: La url a la cual se le hace una peiticion no existe, entonces la promesa cae automaticamente en el catch
 
-*/
-fetch("https://nofuncion.com")
+// */
+/*fetch("https://nofuncion.com")
 	.then((res) => res.json())
 	.catch((error) => alert(error));
-
+*/
 //  fetch
 // fetch es un metodo para hacer peticiones a externos
+
+const miPromesa = () => {
+	return new Promise((resolve, reject) => {
+		resolve("Genio");
+	});
+};
+
+// const llamarApromesa = () => {
+// 	miPromesa()
+// 		.then((res) => alert(res))
+// 		.catch((error) => console.log(error));
+// };
+
+// 	Usando try catch
+const llamarPromesa = async () => {
+	try {
+		const res = await miPromesa();
+		console.log(res);
+	} catch (error) {
+		console.log("Eror");
+	}
+};
+// llamarPromesa();
+const cuadrado = () => {
+	return new Promise((resolve, reject) => [
+		setTimeout(resolve => {
+			
+		})
+	])
+}
